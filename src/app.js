@@ -11,11 +11,28 @@ import dotenv from 'dotenv'
 import minimist from 'minimist'
 import {fork} from 'child_process'
 import cluster from 'cluster'
-import os from 'os'
+import os, { hostname } from 'os'
 import compression from 'compression'
+import log4js from 'log4js'
+
+log4js.configure({
+    appenders: {
+        miLoggerConsole: { type: 'console' },
+        miLoggerFile: { type: 'file', filename: 'warns.log' },
+        miLoggerFile2: { type: 'file', filename: 'errors.log' }
+    },
+    categories: {
+        default: { appenders: ['miLoggerConsole'], level: 'info' },
+        archivo: { appenders: ['miLoggerFile'], level: 'warn' },
+        archivo2: { appenders: ['miLoggerFile2'], level: 'error' },
+    }
+})
+
+let loggerConsole = log4js.getLogger()
+let loggerWarn = log4js.getLogger('archivo')
+let loggerError = log4js.getLogger('archivo2')
 
 const numCPUs = os.cpus().length
-
 
 dotenv.config()
 
@@ -130,17 +147,21 @@ mongoose.connect(URL,{
 
 app.get('/',(req,res)=>{
     res.render('home',{prueba:0})
+    loggerConsole.info(`${req.method} to ${req.get('host')}${req.originalUrl}`)
 })
 app.get('/signup',(req,res)=>{
     if(req.isAuthenticated()) return res.redirect('/profile')
     res.render('signup')
+    loggerConsole.info(`${req.method} to ${req.get('host')}${req.originalUrl}`)
 })
 app.get('/login',(req,res)=>{
     if(req.isAuthenticated()) return res.redirect('/profile')
     res.render('login')
+    loggerConsole.info(`${req.method} to ${req.get('host')}${req.originalUrl}`)
 })
 app.get('/profile',isUserLogged,(req,res)=>{
     res.render('profile',{user:req.session.passport.user.username})
+    loggerConsole.info(`${req.method} to ${req.get('host')}${req.originalUrl}`)
 })
 app.get('/logout',(req,res)=>{
     if(req.isAuthenticated()) {
@@ -148,25 +169,30 @@ app.get('/logout',(req,res)=>{
         res.render('logout') 
     }
     res.redirect('/')
+    loggerConsole.info(`${req.method} to ${req.get('host')}${req.originalUrl}`)
 })
 
 app.get('/userExist',(req,res)=>{
     res.render('userExist')
+    loggerConsole.info(`${req.method} to ${req.get('host')}${req.originalUrl}`)
 })
 app.get('/invalidPassword',(req,res)=>{
     res.render('invalidPassword')
+    loggerConsole.info(`${req.method} to ${req.get('host')}${req.originalUrl}`)
 })
 
 app.post('/signup',passport.authenticate('signupStrategy',{
     failureRedirect:'/userExist'
 }),(req,res)=>{
     res.redirect('/profile')
+    loggerConsole.info(`${req.method} to ${req.get('host')}${req.originalUrl}`)
 })
 
 app.post('/login',passport.authenticate('loginStrategy',{
     failureRedirect:'/invalidPassword'
 }),(req,res)=>{
     res.redirect('/profile')
+    loggerConsole.info(`${req.method} to ${req.get('host')}${req.originalUrl}`)
 })
 
 app.get('/info',(req,res)=>{
@@ -181,6 +207,7 @@ app.get('/info',(req,res)=>{
         CPUs: numCPUs
     }
     res.send(info)
+    loggerConsole.info(`${req.method} to ${req.get('host')}${req.originalUrl}`)
 })
 
 const child = fork('./src/child.js')
@@ -197,4 +224,9 @@ app.get('/api/random',(req,res)=>{
         res.json({PID:process.pid, objFinal})
     }, 3500);
 
+})
+
+app.get('*',(req,res)=>{
+    loggerConsole.warn(`${req.method} to ${req.get('host')}${req.originalUrl}`)
+    loggerWarn.warn(`${req.method} to ${req.get('host')}${req.originalUrl}`)
 })
