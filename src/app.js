@@ -211,7 +211,7 @@ app.get('/info',(req,res)=>{
         folder: process.env.PWD,
         CPUs: numCPUs
     }
-    //console.log(info)
+    console.log(info)
     res.send(info)
     loggerConsole.info(`${req.method} to ${req.get('host')}${req.originalUrl}`)
 })
