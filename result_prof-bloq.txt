@@ -1,0 +1,645 @@
+Statistical profiling result from bloq-v8.log, (5239 ticks, 18 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     55    1.0%          /usr/lib/system/libsystem_pthread.dylib
+     39    0.7%          /usr/lib/system/libsystem_malloc.dylib
+     30    0.6%          /usr/lib/system/libsystem_c.dylib
+     24    0.5%          /usr/lib/libc++.1.dylib
+     14    0.3%          /usr/lib/system/libsystem_platform.dylib
+      5    0.1%          /usr/lib/libc++abi.dylib
+      4    0.1%          /usr/lib/system/libdyld.dylib
+      2    0.0%          /usr/lib/system/libsystem_kernel.dylib
+      1    0.0%          /usr/lib/system/libsystem_m.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      6    0.1%    0.1%  LazyCompile: *resolve node:path:1091:10
+      6    0.1%    0.1%  LazyCompile: *next /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:177:16
+      5    0.1%    0.1%  LazyCompile: *nextTick node:internal/process/task_queues:104:18
+      3    0.1%    0.1%  LazyCompile: *formatWithOptionsInternal node:internal/util/inspect:1889:35
+      2    0.0%    0.0%  LazyCompile: *writeOrBuffer node:internal/streams/writable:365:23
+      2    0.0%    0.0%  LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      2    0.0%    0.0%  LazyCompile: *getHeader node:_http_outgoing:587:57
+      2    0.0%    0.0%  LazyCompile: *formatRaw node:internal/util/inspect:794:19
+      2    0.0%    0.0%  LazyCompile: *formatProperty node:internal/util/inspect:1670:24
+      1    0.0%    0.0%  RegExp: y{1,4}
+      1    0.0%    0.0%  RegExp: ^\s*([^;\s]*)(?:;|\s|$)
+      1    0.0%    0.0%  RegExp: ^[!#$%&'*+.^_`|~0-9A-Za-z-]+$
+      1    0.0%    0.0%  RegExp: \u001b\[\d\d?m
+      1    0.0%    0.0%  RegExp: ;\s*charset\s*=
+      1    0.0%    0.0%  RegExp: ; *([!#$%&'*+.^_`|~0-9A-Za-z-]+) *= *("(?:[\u000b\u0020\u0021\u0023-\u005b\u005d-\u007e\u0080-\u00ff]|\\[\u000b\u0020-\u00ff])*"|[!#$%&'*+.^_`|~0-9A-Za-z-]+) *
+      1    0.0%    0.0%  RegExp: ; *
+      1    0.0%    0.0%  LazyCompile: *stylizeWithColor node:internal/util/inspect:519:26
+      1    0.0%    0.0%  LazyCompile: *reduceToSingleString node:internal/util/inspect:1762:30
+      1    0.0%    0.0%  LazyCompile: *popAsyncContext node:internal/async_hooks:541:25
+      1    0.0%    0.0%  LazyCompile: *onwrite node:internal/streams/writable:425:17
+      1    0.0%    0.0%  LazyCompile: *normalizeString node:path:66:25
+      1    0.0%    0.0%  LazyCompile: *fastparse /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/parseurl/index.js:95:20
+
+ [C++]:
+   ticks  total  nonlib   name
+   1955   37.3%   38.6%  t __ZN4node9inspector8protocol11NodeTracing11TraceConfig15serializeToJSONEv
+   1106   21.1%   21.8%  T _posix_spawn_file_actions_adddup2
+    501    9.6%    9.9%  T __ZN4node10contextify17ContextifyContext15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+    392    7.5%    7.7%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_6WritevERKN2v820FunctionCallbackInfoINS2_5ValueEEEEEEEvS7_
+    363    6.9%    7.2%  t __ZN4node2fsL4ReadERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+    113    2.2%    2.2%  T __ZN4node13native_module15NativeModuleEnv15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     84    1.6%    1.7%  t __ZN4node2fsL22InternalModuleReadJSONERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     41    0.8%    0.8%  t __ZN4node2fsL4OpenERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     38    0.7%    0.8%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_11WriteStringILNS_8encodingE1EEEiRKN2v820FunctionCallbackInfoINS4_5ValueEEEEEEEvS9_
+     35    0.7%    0.7%  T __kernelrpc_mach_port_get_refs
+     33    0.6%    0.7%  T _task_restartable_ranges_register
+     32    0.6%    0.6%  T _getxattr
+     31    0.6%    0.6%  t __ZN4node2fsL18InternalModuleStatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     30    0.6%    0.6%  T ___getrlimit
+     28    0.5%    0.6%  T __ZN4node2fs5CloseERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     20    0.4%    0.4%  T __ZN4node6crypto4Hash3NewERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     18    0.3%    0.4%  t __ZN4nodeL9EnvGetterEN2v85LocalINS0_4NameEEERKNS0_20PropertyCallbackInfoINS0_5ValueEEE
+     18    0.3%    0.4%  T _task_restartable_ranges_synchronize
+     12    0.2%    0.2%  T __ZN4node6crypto4Hash10HashDigestERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     10    0.2%    0.2%  t __ZNSt3__124__put_character_sequenceIcNS_11char_traitsIcEEEERNS_13basic_ostreamIT_T0_EES7_PKS4_m
+     10    0.2%    0.2%  t __ZN4node6Buffer12_GLOBAL__N_111StringSliceILNS_8encodingE1EEEvRKN2v820FunctionCallbackInfoINS4_5ValueEEE
+      8    0.2%    0.2%  T _socket
+      8    0.2%    0.2%  T __ZN4node6crypto4Hash10HashUpdateERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      7    0.1%    0.1%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_11WriteBufferERKN2v820FunctionCallbackInfoINS2_5ValueEEEEEEEvS7_
+      6    0.1%    0.1%  T __ZN4node6crypto4Hmac8HmacInitERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      5    0.1%    0.1%  T _vm_region_64
+      5    0.1%    0.1%  T _mach_port_allocate
+      4    0.1%    0.1%  t __ZN4node6Buffer12_GLOBAL__N_111StringWriteILNS_8encodingE1EEEvRKN2v820FunctionCallbackInfoINS4_5ValueEEE
+      4    0.1%    0.1%  t __ZN4node2fsL5FStatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      4    0.1%    0.1%  T _proc_set_dirty
+      4    0.1%    0.1%  T __ZN4node6crypto13SecureContext12AddRootCertsERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      3    0.1%    0.1%  t __ZNSt3__116__pad_and_outputIcNS_11char_traitsIcEEEENS_19ostreambuf_iteratorIT_T0_EES6_PKS4_S8_S8_RNS_8ios_baseES4_
+      3    0.1%    0.1%  t __ZN4node3url12_GLOBAL__N_15ParseERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      3    0.1%    0.1%  t __ZN4node2fsL5LStatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      3    0.1%    0.1%  t __ZN4node15TraceEventScopeC2EPKcS2_Pv
+      3    0.1%    0.1%  T __ZN4node7binding18GetInternalBindingERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      3    0.1%    0.1%  T __ZN4node7TTYWrap3NewERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      3    0.1%    0.1%  T __ZN4node6crypto9CryptoJobINS0_12PBKDF2TraitsEE3RunERKN2v820FunctionCallbackInfoINS4_5ValueEEE
+      3    0.1%    0.1%  T __ZN4node11Environment27RunAndClearNativeImmediatesEb
+      2    0.0%    0.0%  t __ZN4node9inspector12_GLOBAL__N_120InspectorConsoleCallERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      2    0.0%    0.0%  t __ZN4node6Buffer12_GLOBAL__N_114ByteLengthUtf8ERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      2    0.0%    0.0%  t __ZN4node12_GLOBAL__N_16Parser5ProxyIMS1_FiPKcmEXadL_ZNS1_15on_header_valueES4_mEEE3RawEP18llhttp__internal_sS4_m
+      2    0.0%    0.0%  t __ZN4node12_GLOBAL__N_118ToggleImmediateRefERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.0%    0.0%  t __ZN4node12_GLOBAL__N_111GetLibuvNowERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.0%    0.0%  T _task_name_for_pid
+      2    0.0%    0.0%  T _mach_port_deallocate
+      2    0.0%    0.0%  T _geteuid
+      2    0.0%    0.0%  T __ZN4node7binding6DLOpenERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.0%    0.0%  T __ZN4node6crypto4Hmac10HmacDigestERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      2    0.0%    0.0%  T __ZN4node21InternalCallbackScope5CloseEv
+      1    0.0%    0.0%  t __ZZN4node11Environment25StartProfilerIdleNotifierEvEN3$_58__invokeEP10uv_check_s
+      1    0.0%    0.0%  t __ZThn56_N4node12_GLOBAL__N_16Parser13OnStreamAllocEm
+      1    0.0%    0.0%  t __ZNSt3__112__hash_tableIPN2v817TracingController18TraceStateObserverENS_4hashIS4_EENS_8equal_toIS4_EENS_9allocatorIS4_EEE6removeENS_21__hash_const_iteratorIPNS_11__hash_nodeIS4_PvEEEE
+      1    0.0%    0.0%  t __ZN4node4utilL15GetProxyDetailsERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.0%    0.0%  t __ZN4node4utilL14SetHiddenValueERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.0%    0.0%  t __ZN4node2osL16GetOSInformationERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.0%    0.0%  t __ZN4node2fsL4StatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.0%    0.0%  t __ZN4node2fsL14OpenFileHandleERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.0%    0.0%  t __ZN4node12_GLOBAL__N_116IsAnyArrayBufferERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.0%    0.0%  t __ZN4node12_GLOBAL__N_111ProcessWrap5SpawnERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.0%    0.0%  t __ZN4node10AsyncHooks18push_async_contextEddN2v85LocalINS1_6ObjectEEE
+      1    0.0%    0.0%  T _vm_copy
+      1    0.0%    0.0%  T _semaphore_create
+      1    0.0%    0.0%  T _pthread_setschedparam
+      1    0.0%    0.0%  T _pthread_atfork
+      1    0.0%    0.0%  T _posix_spawnattr_setmacpolicyinfo_np
+      1    0.0%    0.0%  T _pid_for_task
+      1    0.0%    0.0%  T _os_packet_get_expire_time
+      1    0.0%    0.0%  T ___rename
+      1    0.0%    0.0%  T __ZThn88_N4node15LibuvStreamWrap9IsIPCPipeEv
+      1    0.0%    0.0%  T __ZThn88_N4node15LibuvStreamWrap10DoTryWriteEPP8uv_buf_tPm
+      1    0.0%    0.0%  T __ZN4node9AsyncWrap19EmitTraceEventAfterENS0_12ProviderTypeEd
+      1    0.0%    0.0%  T __ZN4node7TCPWrap7ConnectERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node6loader10ModuleWrap3NewERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node6loader10ModuleWrap18SetSyntheticExportERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node6crypto9CryptoJobINS0_17RandomBytesTraitsEE3RunERKN2v820FunctionCallbackInfoINS4_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node6crypto13DeriveBitsJobINS0_17RandomBytesTraitsEE3NewERKN2v820FunctionCallbackInfoINS4_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node26DTRACE_HTTP_SERVER_REQUESTERKN2v820FunctionCallbackInfoINS0_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node23IsConstructCallCallbackERKN2v820FunctionCallbackInfoINS0_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node15LibuvStreamWrap8OnUvReadElPK8uv_buf_t
+      1    0.0%    0.0%  T __ZN4node11StringBytes11StorageSizeEPN2v87IsolateENS1_5LocalINS1_5ValueEEENS_8encodingE
+      1    0.0%    0.0%  T __ZN4node10cares_wrap11ChannelWrap3NewERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node10StreamBase11WriteStringILNS_8encodingE1EEEiRKN2v820FunctionCallbackInfoINS3_5ValueEEE
+
+ [Summary]:
+   ticks  total  nonlib   name
+     43    0.8%    0.8%  JavaScript
+   5004   95.5%   98.8%  C++
+    229    4.4%    4.5%  GC
+    174    3.3%          Shared libraries
+     18    0.3%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+   3617   98.9%   69.0%  t __ZN4node9inspector8protocol11NodeTracing11TraceConfig15serializeToJSONEv
+     28    0.8%    0.5%  T _getxattr
+      5    0.1%    0.1%  T _vm_region_64
+      2    0.1%    0.0%  t __ZN4node9inspector12_GLOBAL__N_120InspectorConsoleCallERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.0%    0.0%  t __ZN4node2fsL5LStatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.0%    0.0%  T _vm_copy
+      1    0.0%    0.0%  T __ZThn88_N4node15LibuvStreamWrap9IsIPCPipeEv
+      1    0.0%    0.0%  T __ZThn88_N4node15LibuvStreamWrap10DoTryWriteEPP8uv_buf_tPm
+      1    0.0%    0.0%  T __ZN4node6loader10ModuleWrap8EvaluateERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node11StringBytes11StorageSizeEPN2v87IsolateENS1_5LocalINS1_5ValueEEENS_8encodingE
+      1    0.0%    0.0%  T __ZN4node10StreamBase11WriteStringILNS_8encodingE1EEEiRKN2v820FunctionCallbackInfoINS3_5ValueEEE
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   1955   37.3%  t __ZN4node9inspector8protocol11NodeTracing11TraceConfig15serializeToJSONEv
+    671   34.3%    t __ZN4node9inspector8protocol11NodeTracing11TraceConfig15serializeToJSONEv
+     46    6.9%      t __ZN4node9inspector8protocol11NodeTracing11TraceConfig15serializeToJSONEv
+      5   10.9%        LazyCompile: ~header /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/response.js:777:29
+      5  100.0%          LazyCompile: ~json /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/response.js:250:25
+      5  100.0%            LazyCompile: ~send /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/response.js:111:25
+      4    8.7%        LazyCompile: ~parse /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/content-type/index.js:106:16
+      4  100.0%          LazyCompile: ~setCharset /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/utils.js:248:41
+      4  100.0%            LazyCompile: ~send /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/response.js:111:25
+      4    8.7%        LazyCompile: ~expressInit /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/middleware/init.js:29:30
+      3   75.0%          LazyCompile: ~handle /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/layer.js:86:49
+      3  100.0%            LazyCompile: ~trim_prefix /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:293:23
+      1   25.0%          LazyCompile: *trim_prefix /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            LazyCompile: *next /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:177:16
+      4    8.7%        LazyCompile: ~checkInvalidHeaderChar node:_http_common:232:32
+      4  100.0%          LazyCompile: ~<anonymous> node:_http_outgoing:561:45
+      4  100.0%            LazyCompile: ~setHeader node:_http_outgoing:571:57
+      4    8.7%        LazyCompile: ~asString /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/date-format/lib/index.js:29:18
+      4  100.0%          LazyCompile: ~timestampLevelAndCategory /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/log4js/lib/layouts.js:42:35
+      4  100.0%            LazyCompile: ~colouredLayout /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/log4js/lib/layouts.js:71:24
+      3    6.5%        LazyCompile: ~set /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/session/memory.js:119:41
+      3  100.0%          LazyCompile: ~save /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/session/session.js:71:54
+      3  100.0%            LazyCompile: ~save /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/index.js:403:20
+      3    6.5%        LazyCompile: ~removeColors node:internal/util:63:22
+      3  100.0%          LazyCompile: ~isBelowBreakLength node:internal/util/inspect:1738:28
+      3  100.0%            LazyCompile: ~reduceToSingleString node:internal/util/inspect:1762:30
+      2    4.3%        LazyCompile: ~stat node:internal/modules/cjs/loader:151:14
+      2  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      2  100.0%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      2    4.3%        LazyCompile: ~readPackageScope node:internal/modules/cjs/loader:321:26
+      1   50.0%          LazyCompile: ~trySelf node:internal/modules/cjs/loader:441:17
+      1  100.0%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1   50.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:969:33
+      2    4.3%        LazyCompile: ~parse node:url:168:37
+      2  100.0%          LazyCompile: ~urlParse node:url:152:18
+      2  100.0%            LazyCompile: ~validate_config /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:195:25
+      1    2.2%        t __ZN4node9inspector8protocol11NodeTracing11TraceConfig15serializeToJSONEv
+      1  100.0%          LazyCompile: ~set /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/session/memory.js:119:41
+      1  100.0%            LazyCompile: ~save /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/session/session.js:71:54
+      1    2.2%        LazyCompile: ~stringToPath /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/get-intrinsic/index.js:209:41
+      1  100.0%          LazyCompile: ~GetIntrinsic /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/get-intrinsic/index.js:252:39
+      1  100.0%            Function: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/call-bind/index.js:1:1
+      1    2.2%        LazyCompile: ~readPackage node:internal/modules/cjs/loader:290:21
+      1  100.0%          LazyCompile: ~readPackageScope node:internal/modules/cjs/loader:321:26
+      1  100.0%            LazyCompile: ~trySelf node:internal/modules/cjs/loader:441:17
+      1    2.2%        LazyCompile: ~primordials.SafePromisePrototypeFinally node:internal/per_context/primordials:409:43
+      1  100.0%          LazyCompile: ~readFile node:internal/fs/promises:733:24
+      1  100.0%            t __ZN4node9inspector8protocol11NodeTracing11TraceConfig15serializeToJSONEv
+      1    2.2%        LazyCompile: ~isIPv6 node:internal/net:35:16
+      1  100.0%          LazyCompile: ~isIP node:internal/net:39:14
+      1  100.0%            LazyCompile: ~parseSslOptions /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb/lib/cmap/connect.js:222:25
+      1    2.2%        LazyCompile: ~exports.sign /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/cookie-signature/index.js:16:24
+      1  100.0%          LazyCompile: ~setcookie /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/index.js:655:19
+      1  100.0%            LazyCompile: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/index.js:220:28
+      1    2.2%        LazyCompile: ~createApplication /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/express.js:37:27
+      1  100.0%          Script: ~<anonymous> file:///Users/julian/Desktop/FullStack%20dev/BackEnd/desafioLoggers/src/app.js:1:1
+      1  100.0%            t __ZN4node9inspector8protocol11NodeTracing11TraceConfig15serializeToJSONEv
+      1    2.2%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      1    2.2%        LazyCompile: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/aproba/index.js:34:19
+      1  100.0%          t __ZN4node9inspector8protocol11NodeTracing11TraceConfig15serializeToJSONEv
+      1  100.0%            LazyCompile: ~validate /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/aproba/index.js:25:19
+      1    2.2%        Function: ~<anonymous> node:tty:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      1    2.2%        Function: ~<anonymous> node:internal/net:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    2.2%        Function: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/application.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    2.2%        Function: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/debug/src/node.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+     23    3.4%      LazyCompile: ~compression /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/compression/index.js:59:31
+     21   91.3%        LazyCompile: ~handle /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/layer.js:86:49
+     21  100.0%          LazyCompile: ~trim_prefix /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:293:23
+     17   81.0%            LazyCompile: *next /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:177:16
+      4   19.0%            LazyCompile: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:280:64
+      2    8.7%        LazyCompile: *trim_prefix /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:293:23
+      2  100.0%          LazyCompile: *next /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:177:16
+      2  100.0%            LazyCompile: ~urlencodedParser /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/body-parser/lib/types/urlencoded.js:79:36
+     19    2.8%      LazyCompile: ~authenticate /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/passport/lib/middleware/authenticate.js:94:31
+     13   68.4%        LazyCompile: ~handle /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/layer.js:86:49
+     13  100.0%          LazyCompile: ~trim_prefix /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:293:23
+      9   69.2%            LazyCompile: *next /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:177:16
+      4   30.8%            LazyCompile: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:280:64
+      6   31.6%        LazyCompile: *trim_prefix /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:293:23
+      6  100.0%          LazyCompile: *next /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:177:16
+      6  100.0%            LazyCompile: ~initialize /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/passport/lib/middleware/initialize.js:51:29
+     19    2.8%      LazyCompile: *next /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:177:16
+     14   73.7%        LazyCompile: ~strategy.pass /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/passport/lib/middleware/authenticate.js:345:31
+     14  100.0%          LazyCompile: ~SessionStrategy.authenticate /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/passport/lib/strategies/session.js:45:50
+     14  100.0%            LazyCompile: ~attempt /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/passport/lib/middleware/authenticate.js:180:22
+      2   10.5%        LazyCompile: ~initialize /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/passport/lib/middleware/initialize.js:51:29
+      1   50.0%          LazyCompile: ~handle /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            LazyCompile: ~trim_prefix /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:293:23
+      1   50.0%          LazyCompile: *trim_prefix /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            LazyCompile: *next /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:177:16
+      1    5.3%        LazyCompile: ~jsonParser /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/body-parser/lib/types/json.js:98:30
+      1  100.0%          LazyCompile: ~handle /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            LazyCompile: ~trim_prefix /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:293:23
+      1    5.3%        LazyCompile: ~handle /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:136:31
+      1  100.0%          LazyCompile: ~handle /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/application.js:165:29
+      1  100.0%            LazyCompile: ~app /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/express.js:38:21
+      1    5.3%        LazyCompile: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/index.js:485:38
+      1  100.0%          LazyCompile: *processImmediate node:internal/timers:421:28
+     18    2.7%      LazyCompile: ~setWriteHeadHeaders /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/on-headers/index.js:105:30
+     18  100.0%        LazyCompile: ~writeHead /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/on-headers/index.js:28:29
+     17   94.4%          LazyCompile: ~_implicitHeader node:_http_server:265:68
+     17  100.0%            LazyCompile: ~writetop /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/index.js:270:24
+      1    5.6%          LazyCompile: ~writeHead /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/on-headers/index.js:28:29
+      1  100.0%            LazyCompile: ~_implicitHeader node:_http_server:265:68
+     17    2.5%      LazyCompile: ~hash /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/index.js:596:14
+     11   64.7%        LazyCompile: ~isSaved /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/index.js:430:21
+     11  100.0%          LazyCompile: ~shouldSave /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/index.js:440:24
+     11  100.0%            LazyCompile: ~end /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/index.js:250:27
+      4   23.5%        LazyCompile: ~inflate /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/index.js:371:22
+      4  100.0%          LazyCompile: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/index.js:485:38
+      2   50.0%            LazyCompile: ~processImmediate node:internal/timers:421:28
+      2   50.0%            LazyCompile: *processImmediate node:internal/timers:421:28
+      2   11.8%        LazyCompile: ~isModified /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/index.js:425:24
+      2  100.0%          LazyCompile: ~shouldSetCookie /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/index.js:464:29
+      2  100.0%            LazyCompile: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/index.js:220:28
+     16    2.4%      LazyCompile: ~Hash node:internal/crypto/hash:58:14
+     16  100.0%        LazyCompile: ~createHash node:crypto:129:20
+      9   56.3%          LazyCompile: ~hash /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/index.js:596:14
+      4   44.4%            LazyCompile: ~inflate /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/index.js:371:22
+      3   33.3%            LazyCompile: ~isSaved /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/index.js:430:21
+      1   11.1%            LazyCompile: ~save /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/index.js:403:20
+      1   11.1%            LazyCompile: ~isModified /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/index.js:425:24
+      5   31.3%          LazyCompile: ~sha1 /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/cookie-signature/index.js:49:14
+      5  100.0%            LazyCompile: ~exports.unsign /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/cookie-signature/index.js:36:26
+      2   12.5%          LazyCompile: ~entitytag /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/etag/index.js:39:20
+      2  100.0%            LazyCompile: ~etag /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/etag/index.js:70:15
+     15    2.2%      LazyCompile: *nextTick node:internal/process/task_queues:104:18
+      8   53.3%        LazyCompile: ~onwrite node:internal/streams/writable:425:17
+      7   87.5%          LazyCompile: ~afterWriteDispatched node:internal/stream_base_commons:155:30
+      5   71.4%            LazyCompile: ~writevGeneric node:internal/stream_base_commons:122:23
+      2   28.6%            LazyCompile: ~writeGeneric node:internal/stream_base_commons:147:22
+      1   12.5%          LazyCompile: *writeOrBuffer node:internal/streams/writable:365:23
+      1  100.0%            LazyCompile: ~_write node:internal/streams/writable:283:16
+      4   26.7%        LazyCompile: ~endReadable node:internal/streams/readable:1314:21
+      4  100.0%          LazyCompile: ~Readable.read node:internal/streams/readable:391:35
+      3   75.0%            LazyCompile: ~resume_ node:internal/streams/readable:980:17
+      1   25.0%            LazyCompile: ~flow node:internal/streams/readable:1004:14
+      1    6.7%        LazyCompile: ~resume node:internal/streams/readable:973:16
+      1  100.0%          LazyCompile: ~Readable.resume node:internal/streams/readable:959:37
+      1  100.0%            LazyCompile: ~_dump node:_http_incoming:364:49
+      1    6.7%        LazyCompile: ~onDestroy node:internal/streams/destroy:73:21
+      1  100.0%          LazyCompile: ~onError node:_http_incoming:374:17
+      1  100.0%            LazyCompile: ~_destroy node:_http_incoming:176:55
+      1    6.7%        LazyCompile: ~emitReadable node:internal/streams/readable:558:22
+      1  100.0%          LazyCompile: ~onEofChunk node:internal/streams/readable:528:20
+      1  100.0%            LazyCompile: ~readableAddChunk node:internal/streams/readable:234:26
+     13    1.9%      LazyCompile: ~writeHead node:_http_server:270:19
+     13  100.0%        LazyCompile: ~writeHead /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/on-headers/index.js:28:29
+     13  100.0%          LazyCompile: ~writeHead /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/on-headers/index.js:28:29
+     13  100.0%            LazyCompile: ~_implicitHeader node:_http_server:265:68
+     13    1.9%      LazyCompile: ~asString /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/date-format/lib/index.js:29:18
+     13  100.0%        LazyCompile: ~timestampLevelAndCategory /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/log4js/lib/layouts.js:42:35
+     13  100.0%          LazyCompile: ~colouredLayout /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/log4js/lib/layouts.js:71:24
+     13  100.0%            LazyCompile: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/log4js/lib/appenders/console.js:5:10
+     11    1.6%      LazyCompile: ~session /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/index.js:179:26
+     10   90.9%        LazyCompile: ~handle /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/layer.js:86:49
+     10  100.0%          LazyCompile: ~trim_prefix /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:293:23
+      7   70.0%            LazyCompile: *next /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:177:16
+      3   30.0%            LazyCompile: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:280:64
+      1    9.1%        LazyCompile: *trim_prefix /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:293:23
+      1  100.0%          LazyCompile: *next /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:177:16
+      1  100.0%            LazyCompile: ~compression /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/compression/index.js:59:31
+     11    1.6%      LazyCompile: ~send /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/response.js:111:25
+      7   63.6%        LazyCompile: ~json /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/response.js:250:25
+      7  100.0%          LazyCompile: ~send /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/response.js:111:25
+      7  100.0%            LazyCompile: ~<anonymous> file:///Users/julian/Desktop/FullStack%20dev/BackEnd/desafioLoggers/src/app.js:203:17
+      4   36.4%        LazyCompile: ~<anonymous> file:///Users/julian/Desktop/FullStack%20dev/BackEnd/desafioLoggers/src/app.js:203:17
+      4  100.0%          LazyCompile: ~handle /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/layer.js:86:49
+      4  100.0%            LazyCompile: ~next /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/route.js:116:16
+     11    1.6%      LazyCompile: ~Store.createSession /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/session/store.js:86:41
+     11  100.0%        LazyCompile: ~inflate /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/index.js:371:22
+     11  100.0%          LazyCompile: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/index.js:485:38
+      6   54.5%            LazyCompile: ~processImmediate node:internal/timers:421:28
+      5   45.5%            LazyCompile: *processImmediate node:internal/timers:421:28
+     11    1.6%      LazyCompile: ~<anonymous> file:///Users/julian/Desktop/FullStack%20dev/BackEnd/desafioLoggers/src/app.js:203:17
+     11  100.0%        LazyCompile: ~handle /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/layer.js:86:49
+     11  100.0%          LazyCompile: ~next /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/route.js:116:16
+     11  100.0%            LazyCompile: ~dispatch /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/route.js:98:45
+      9    1.3%      LazyCompile: ~jsonParser /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/body-parser/lib/types/json.js:98:30
+      7   77.8%        LazyCompile: ~handle /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/layer.js:86:49
+      7  100.0%          LazyCompile: ~trim_prefix /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:293:23
+      7  100.0%            LazyCompile: *next /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:177:16
+      2   22.2%        LazyCompile: *trim_prefix /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:293:23
+      2  100.0%          LazyCompile: *next /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:177:16
+      2  100.0%            LazyCompile: ~expressInit /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/middleware/init.js:29:30
+      9    1.3%      LazyCompile: ~getColorDepth node:internal/tty:109:23
+      9  100.0%        LazyCompile: ~value node:internal/console/constructor:303:20
+      9  100.0%          LazyCompile: ~value node:internal/console/constructor:324:20
+      9  100.0%            LazyCompile: ~log node:internal/console/constructor:362:6
+      8    1.2%      LazyCompile: ~stringify /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/response.js:1145:20
+      8  100.0%        LazyCompile: ~json /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/response.js:250:25
+      8  100.0%          LazyCompile: ~send /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/response.js:111:25
+      8  100.0%            LazyCompile: ~<anonymous> file:///Users/julian/Desktop/FullStack%20dev/BackEnd/desafioLoggers/src/app.js:203:17
+      8    1.2%      LazyCompile: ~Module._extensions..json node:internal/modules/cjs/loader:1158:39
+      8  100.0%        LazyCompile: ~Module.load node:internal/modules/cjs/loader:969:33
+      8  100.0%          LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      8  100.0%            LazyCompile: ~Module.require node:internal/modules/cjs/loader:997:36
+      7    1.0%      LazyCompile: ~writevGeneric node:internal/stream_base_commons:122:23
+      7  100.0%        LazyCompile: ~Socket._writeGeneric node:net:754:42
+      7  100.0%          LazyCompile: ~Socket._writev node:net:786:36
+      7  100.0%            LazyCompile: ~doWrite node:internal/streams/writable:398:17
+      7    1.0%      LazyCompile: ~parse /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/content-type/index.js:106:16
+      7  100.0%        LazyCompile: ~setCharset /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/utils.js:248:41
+      7  100.0%          LazyCompile: ~send /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/response.js:111:25
+      7  100.0%            LazyCompile: ~json /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/response.js:250:25
+      7    1.0%      LazyCompile: ~onHeaders /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/on-headers/index.js:56:20
+      4   57.1%        LazyCompile: ~compression /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/compression/index.js:59:31
+      3   75.0%          LazyCompile: ~handle /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/layer.js:86:49
+      3  100.0%            LazyCompile: ~trim_prefix /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:293:23
+      1   25.0%          LazyCompile: *trim_prefix /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            LazyCompile: *next /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:177:16
+      3   42.9%        LazyCompile: ~session /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/index.js:179:26
+      3  100.0%          LazyCompile: ~handle /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/layer.js:86:49
+      3  100.0%            LazyCompile: ~trim_prefix /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:293:23
+      7    1.0%      LazyCompile: ~nextTick node:internal/process/task_queues:104:18
+      3   42.9%        LazyCompile: ~write_ node:_http_outgoing:727:16
+      3  100.0%          LazyCompile: ~write node:_http_outgoing:698:49
+      3  100.0%            LazyCompile: ~write /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/compression/index.js:78:32
+      3   42.9%        LazyCompile: ~onwrite node:internal/streams/writable:425:17
+      3  100.0%          LazyCompile: ~afterWriteDispatched node:internal/stream_base_commons:155:30
+      3  100.0%            LazyCompile: ~writevGeneric node:internal/stream_base_commons:122:23
+      1   14.3%        LazyCompile: ~onDestroy node:internal/streams/destroy:73:21
+      1  100.0%          LazyCompile: ~onError node:_http_incoming:374:17
+      1  100.0%            LazyCompile: ~_destroy node:_http_incoming:176:55
+      7    1.0%      LazyCompile: ~getSession /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/session/memory.js:164:20
+      7  100.0%        LazyCompile: ~get /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/session/memory.js:106:41
+      7  100.0%          LazyCompile: ~session /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express-session/index.js:179:26
+      4   57.1%            LazyCompile: *trim_prefix /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/index.js:293:23
+      3   42.9%            LazyCompile: ~handle /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/express/lib/router/layer.js:86:49
+
+   1106   21.1%  T _posix_spawn_file_actions_adddup2
+
+    501    9.6%  T __ZN4node10contextify17ContextifyContext15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+    501  100.0%    t __ZN4node9inspector8protocol11NodeTracing11TraceConfig15serializeToJSONEv
+    501  100.0%      LazyCompile: ~compileFunction node:vm:308:25
+    501  100.0%        LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1017:18
+    501  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+    501  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+
+    392    7.5%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_6WritevERKN2v820FunctionCallbackInfoINS2_5ValueEEEEEEEvS7_
+    392  100.0%    t __ZN4node9inspector8protocol11NodeTracing11TraceConfig15serializeToJSONEv
+    392  100.0%      LazyCompile: ~writevGeneric node:internal/stream_base_commons:122:23
+    392  100.0%        LazyCompile: ~Socket._writeGeneric node:net:754:42
+    392  100.0%          LazyCompile: ~Socket._writev node:net:786:36
+    392  100.0%            LazyCompile: ~doWrite node:internal/streams/writable:398:17
+
+    363    6.9%  t __ZN4node2fsL4ReadERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+    363  100.0%    t __ZN4node9inspector8protocol11NodeTracing11TraceConfig15serializeToJSONEv
+    363  100.0%      LazyCompile: ~readSync node:fs:681:18
+    363  100.0%        LazyCompile: ~tryReadSync node:fs:426:21
+    363  100.0%          LazyCompile: ~readFileSync node:fs:447:22
+    358   98.6%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+
+    113    2.2%  T __ZN4node13native_module15NativeModuleEnv15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+    113  100.0%    t __ZN4node9inspector8protocol11NodeTracing11TraceConfig15serializeToJSONEv
+    113  100.0%      LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     91   80.5%        LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+     12   13.2%          Function: ~<anonymous> node:crypto:1:1
+     12  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      9    9.9%          Function: ~<anonymous> node:http:1:1
+      9  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      8    8.8%          Function: ~<anonymous> node:tls:1:1
+      8  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      8    8.8%          Function: ~<anonymous> node:internal/child_process:1:1
+      8  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      5    5.5%          LazyCompile: ~initializeCJSLoader node:internal/bootstrap/pre_execution:421:29
+      5  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      4    4.4%          Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      4  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      4    4.4%          Function: ~<anonymous> node:_http_client:1:1
+      4  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    3.3%          LazyCompile: ~initCJSParse node:internal/modules/esm/translators:67:28
+      3  100.0%            LazyCompile: ~commonjsStrategy node:internal/modules/esm/translators:175:60
+      3    3.3%          Function: ~<anonymous> node:internal/modules/esm/get_source:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    3.3%          Function: ~<anonymous> node:internal/crypto/hkdf:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    3.3%          Function: ~<anonymous> node:child_process:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    3.3%          Function: ~<anonymous> node:assert:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    2.2%          LazyCompile: ~lazyRequire node:internal/crypto/util:67:21
+      2  100.0%            LazyCompile: ~get node:crypto:287:8
+      2    2.2%          LazyCompile: ~lazyLoadStreams node:fs:2793:25
+      2  100.0%            LazyCompile: ~get ReadStream node:fs:2934:17
+      2    2.2%          LazyCompile: ~get node:dns:334:8
+      2  100.0%            t __ZN4node9inspector8protocol11NodeTracing11TraceConfig15serializeToJSONEv
+      2    2.2%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      2    2.2%          Function: ~<anonymous> node:_http_common:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.1%          LazyCompile: ~setupInspectorHooks node:internal/bootstrap/pre_execution:232:29
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1    1.1%          LazyCompile: ~initializeReport node:internal/bootstrap/pre_execution:182:26
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1    1.1%          LazyCompile: ~get BlockList node:net:1760:16
+      1  100.0%            t __ZN4node9inspector8protocol11NodeTracing11TraceConfig15serializeToJSONEv
+      1    1.1%          Function: ~<anonymous> node:internal/source_map/source_map_cache:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.1%          Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.1%          Function: ~<anonymous> node:internal/modules/esm/translators:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.1%          Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.1%          Function: ~<anonymous> node:internal/crypto/util:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.1%          Function: ~<anonymous> node:internal/crypto/pbkdf2:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.1%          Function: ~<anonymous> node:internal/crypto/cipher:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.1%          Function: ~<anonymous> node:internal/cluster/round_robin_handle:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.1%          Function: ~<anonymous> node:internal/blocklist:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.1%          Function: ~<anonymous> node:dns:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.1%          Function: ~<anonymous> node:cluster:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.1%          Function: ~<anonymous> node:_tls_wrap:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.1%          Function: ~<anonymous> node:_tls_common:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     22   19.5%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:246:25
+     22  100.0%          LazyCompile: ~loadNativeModule node:internal/modules/cjs/helpers:36:26
+     18   81.8%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      4   18.2%            LazyCompile: ~builtinStrategy node:internal/modules/esm/translators:276:58
+
+     84    1.6%  t __ZN4node2fsL22InternalModuleReadJSONERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     84  100.0%    t __ZN4node9inspector8protocol11NodeTracing11TraceConfig15serializeToJSONEv
+     84  100.0%      LazyCompile: ~read node:internal/modules/package_json_reader:16:14
+     78   92.9%        LazyCompile: ~readPackage node:internal/modules/cjs/loader:290:21
+     78  100.0%          LazyCompile: ~resolveExports node:internal/modules/cjs/loader:472:24
+     78  100.0%            LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      6    7.1%        LazyCompile: ~getPackageConfig node:internal/modules/esm/resolve:124:26
+      6  100.0%          LazyCompile: ~packageResolve node:internal/modules/esm/resolve:666:24
+      6  100.0%            LazyCompile: ~moduleResolve node:internal/modules/esm/resolve:741:23
+
+     55    1.0%  /usr/lib/system/libsystem_pthread.dylib
+     47   85.5%    t __ZN4node9inspector8protocol11NodeTracing11TraceConfig15serializeToJSONEv
+      3    6.4%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:393:20
+      3  100.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      3  100.0%          LazyCompile: ~resolveMainPath node:internal/modules/run_main:11:25
+      3  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:72:31
+      2    4.3%      t __ZN4node9inspector8protocol11NodeTracing11TraceConfig15serializeToJSONEv
+      1   50.0%        LazyCompile: ~getOwn node:internal/bootstrap/loaders:180:16
+      1  100.0%          LazyCompile: ~syncExports node:internal/bootstrap/loaders:287:14
+      1  100.0%            LazyCompile: ~<anonymous> node:internal/bootstrap/loaders:273:15
+      1   50.0%        LazyCompile: ~containsNamespace /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/depd/index.js:29:28
+      1  100.0%          LazyCompile: ~istraced /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/depd/index.js:169:19
+      1  100.0%            LazyCompile: ~depd /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/depd/index.js:103:15
+      2    4.3%      LazyCompile: ~validate_config /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:195:25
+      2  100.0%        LazyCompile: ~exports.find /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      2  100.0%          Function: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/bcrypt/bcrypt.js:1:1
+      2  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      2    4.3%      LazyCompile: ~setStreamTimeout node:internal/stream_base_commons:245:26
+      2  100.0%        LazyCompile: ~makeConnection /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb/lib/cmap/connect.js:241:24
+      2  100.0%          LazyCompile: ~connect /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb/lib/cmap/connect.js:30:17
+      2  100.0%            LazyCompile: ~checkServer /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb/lib/sdam/monitor.js:139:21
+      2    4.3%      LazyCompile: ~onParseError node:internal/url:535:22
+      2  100.0%        t __ZN4node3url12_GLOBAL__N_15ParseERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      2  100.0%          LazyCompile: ~URL node:internal/url:604:14
+      2  100.0%            LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:804:24
+      2    4.3%      LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:41:35
+      2  100.0%        LazyCompile: ~getStderr node:internal/bootstrap/switches/is_main_thread:132:19
+      2  100.0%          Function: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/debug/src/node.js:1:1
+      2  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      2    4.3%      LazyCompile: ~createAppender /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/log4js/lib/appenders/index.js:62:24
+      2  100.0%        LazyCompile: ~getAppender /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/log4js/lib/appenders/index.js:48:21
+      2  100.0%          LazyCompile: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/log4js/lib/appenders/index.js:112:41
+      2  100.0%            t __ZN4node9inspector8protocol11NodeTracing11TraceConfig15serializeToJSONEv
+      2    4.3%      LazyCompile: ~URLStateMachine /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/whatwg-url/lib/url-state-machine.js:481:25
+      2  100.0%        LazyCompile: ~module.exports.basicURLParse /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/whatwg-url/lib/url-state-machine.js:1206:41
+      2  100.0%          LazyCompile: ~URLImpl /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/whatwg-url/lib/URL-impl.js:7:14
+      2  100.0%            LazyCompile: ~exports.setup /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/whatwg-url/lib/URL.js:49:17
+      2    4.3%      Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      2    4.3%      Function: ~<anonymous> node:internal/fs/rimraf:1:1
+      2  100.0%        LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2  100.0%          LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      2  100.0%            Function: ~<anonymous> node:internal/fs/promises:1:1
+      1    2.1%      t __ZN4node9inspector12_GLOBAL__N_120InspectorConsoleCallERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1  100.0%        LazyCompile: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/log4js/lib/appenders/console.js:5:10
+      1  100.0%          LazyCompile: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/log4js/lib/log4js.js:42:29
+      1  100.0%            t __ZN4node9inspector8protocol11NodeTracing11TraceConfig15serializeToJSONEv
+      1    2.1%      LazyCompile: ~writevGeneric node:internal/stream_base_commons:122:23
+      1  100.0%        LazyCompile: ~Socket._writeGeneric node:net:754:42
+      1  100.0%          LazyCompile: ~Socket._writev node:net:786:36
+      1  100.0%            LazyCompile: ~doWrite node:internal/streams/writable:398:17
+      1    2.1%      LazyCompile: ~writeCommand /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb/lib/cmap/message_stream.js:35:17
+      1  100.0%        LazyCompile: ~write /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb/lib/cmap/connection.js:513:15
+      1  100.0%          LazyCompile: ~command /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb/lib/cmap/connection.js:247:12
+      1  100.0%            LazyCompile: ~executeScram /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb/lib/cmap/auth/scram.js:74:22
+      1    2.1%      LazyCompile: ~stringify node:internal/modules/esm/translators:99:19
+      1  100.0%        LazyCompile: ~moduleStrategy node:internal/modules/esm/translators:137:56
+      1  100.0%          t __ZN4node9inspector8protocol11NodeTracing11TraceConfig15serializeToJSONEv
+      1    2.1%      LazyCompile: ~retry /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/graceful-fs/graceful-fs.js:397:16
+      1  100.0%        LazyCompile: ~resetQueue /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/graceful-fs/graceful-fs.js:383:21
+      1  100.0%          LazyCompile: ~closeSync /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/graceful-fs/graceful-fs.js:72:24
+      1  100.0%            LazyCompile: ~readFileSync node:fs:447:22
+      1    2.1%      LazyCompile: ~resolve node:path:1091:10
+      1  100.0%        LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:81:28
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.1%      LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.1%      LazyCompile: ~parseHostName /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/whatwg-url/lib/url-state-machine.js:773:65
+      1  100.0%        LazyCompile: ~URLStateMachine /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/whatwg-url/lib/url-state-machine.js:481:25
+      1  100.0%          LazyCompile: ~module.exports.basicURLParse /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/whatwg-url/lib/url-state-machine.js:1206:41
+      1  100.0%            LazyCompile: ~URLImpl /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/whatwg-url/lib/URL-impl.js:7:14
+      1    2.1%      LazyCompile: ~onMessage /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb/lib/cmap/connection.js:152:14
+      1  100.0%        LazyCompile: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb/lib/cmap/connection.js:63:44
+      1  100.0%          LazyCompile: ~emit node:events:343:44
+      1  100.0%            LazyCompile: ~processIncomingData /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb/lib/cmap/message_stream.js:79:29
+      1    2.1%      LazyCompile: ~nextTick node:internal/process/task_queues:104:18
+      1  100.0%        LazyCompile: ~immediate /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongoose/lib/helpers/immediate.js:14:36
+      1  100.0%          LazyCompile: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongoose/lib/connection.js:571:34
+      1  100.0%            LazyCompile: ~promiseOrCallback /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongoose/lib/helpers/promiseOrCallback.js:8:44
+      1    2.1%      LazyCompile: ~json /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/body-parser/lib/types/json.js:50:15
+      1  100.0%        Script: ~<anonymous> file:///Users/julian/Desktop/FullStack%20dev/BackEnd/desafioLoggers/src/app.js:1:1
+      1  100.0%          t __ZN4node9inspector8protocol11NodeTracing11TraceConfig15serializeToJSONEv
+      1  100.0%            T __ZN4node6loader10ModuleWrap8EvaluateERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    2.1%      LazyCompile: ~insert node:internal/timers:350:16
+      1  100.0%        LazyCompile: ~setUnrefTimeout node:internal/timers:372:25
+      1  100.0%          LazyCompile: ~setStreamTimeout node:internal/stream_base_commons:245:26
+      1  100.0%            LazyCompile: ~makeConnection /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb/lib/cmap/connect.js:241:24
+      1    2.1%      LazyCompile: ~getSameObject /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/whatwg-url/lib/utils.js:65:23
+      1  100.0%        LazyCompile: ~get searchParams /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/whatwg-url/lib/URL.js:371:21
+      1  100.0%          LazyCompile: ~ConnectionString /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb-connection-string-url/lib/index.js:82:16
+      1  100.0%            LazyCompile: ~parseOptions /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb/lib/connection_string.js:208:22
+      1    2.1%      LazyCompile: ~get href node:internal/url:718:11
+      1  100.0%        LazyCompile: ~<anonymous> node:internal/modules/run_main:46:39
+      1  100.0%          LazyCompile: ~loadESM node:internal/process/esm_loader:65:41
+      1  100.0%            t __ZN4node9inspector8protocol11NodeTracing11TraceConfig15serializeToJSONEv
+      1    2.1%      LazyCompile: ~exports.find /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      1  100.0%        Function: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/bcrypt/bcrypt.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    2.1%      LazyCompile: ~enable /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mquery/node_modules/debug/src/common.js:162:17
+      1  100.0%        LazyCompile: ~setup /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mquery/node_modules/debug/src/common.js:7:15
+      1  100.0%          Function: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mquery/node_modules/debug/src/node.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      1    2.1%      LazyCompile: ~deserialize /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/bson/lib/parser/deserializer.js:36:21
+      1  100.0%        LazyCompile: ~deserialize /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/bson/lib/bson.js:162:21
+      1  100.0%          LazyCompile: ~parse /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb/lib/cmap/commands.js:384:10
+      1  100.0%            LazyCompile: ~onMessage /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb/lib/cmap/connection.js:152:14
+      1    2.1%      LazyCompile: ~debug node:internal/util/debuglog:76:15
+      1  100.0%        LazyCompile: ~logger node:internal/util/debuglog:96:18
+      1  100.0%          LazyCompile: ~Readable.read node:internal/streams/readable:391:35
+      1  100.0%            LazyCompile: ~Socket.read node:net:624:33
+      1    2.1%      LazyCompile: ~command /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb/lib/cmap/connection.js:247:12
+      1  100.0%        LazyCompile: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb/lib/cmap/connect.js:78:43
+      1  100.0%          LazyCompile: ~prepareHandshakeDocument /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb/lib/cmap/connect.js:139:34
+      1  100.0%            LazyCompile: ~performInitialHandshake /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb/lib/cmap/connect.js:62:33
+      1    2.1%      LazyCompile: ~afterWriteDispatched node:internal/stream_base_commons:155:30
+      1  100.0%        LazyCompile: ~writeGeneric node:internal/stream_base_commons:147:22
+      1  100.0%          LazyCompile: ~Socket._writeGeneric node:net:754:42
+      1  100.0%            LazyCompile: ~Socket._write node:net:791:35
+      1    2.1%      LazyCompile: ~TLSSocket._wrapHandle node:_tls_wrap:594:43
+      1  100.0%        LazyCompile: ~TLSSocket node:_tls_wrap:462:19
+      1  100.0%          LazyCompile: ~connect node:_tls_wrap:1597:35
+      1  100.0%            LazyCompile: ~makeConnection /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb/lib/cmap/connect.js:241:24
+      1    2.1%      LazyCompile: ~ReadableState node:internal/streams/readable:78:23
+      1  100.0%        LazyCompile: ~Readable node:internal/streams/readable:179:18
+      1  100.0%          LazyCompile: ~Duplex node:internal/streams/duplex:52:16
+      1  100.0%            LazyCompile: ~Socket node:net:283:16
+      1    2.1%      LazyCompile: ~Duplex node:internal/streams/duplex:52:16
+      1  100.0%        LazyCompile: ~Socket node:net:283:16
+      1  100.0%          LazyCompile: ~WriteStream node:tty:85:21
+      1  100.0%            LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:41:35
+      1    2.1%      LazyCompile: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb/lib/operations/execute_operation.js:16:48
+      1  100.0%        LazyCompile: ~maybePromise /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb/lib/utils.js:397:22
+      1  100.0%          LazyCompile: ~executeOperation /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb/lib/operations/execute_operation.js:11:26
+      1  100.0%            LazyCompile: ~createCollection /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/mongodb/lib/db.js:153:21
+      1    2.1%      Function: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1  100.0%            Function: ~<anonymous> node:internal/modules/esm/get_source:1:1
+      1    2.1%      Function: ~<anonymous> /Users/julian/Desktop/FullStack dev/BackEnd/desafioLoggers/node_modules/saslprep/lib/memory-code-points.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:969:33
+
